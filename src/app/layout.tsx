@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {Geist_Mono, Kantumruy_Pro, Geist } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
+
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+const kantumruy = Kantumruy_Pro({
+  variable: '--font-kantumruy-pro',
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -21,9 +31,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", kantumruy.variable, geistMono.variable, "font-sans", geist.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+    
+       <h1 className="bg-red-500">Navbar</h1>
+        {children}
+        <h2 className="bg-blue-500">Footer</h2>
+        
+        </body>
     </html>
   );
 }
