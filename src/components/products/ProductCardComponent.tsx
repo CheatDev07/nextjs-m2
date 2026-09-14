@@ -33,6 +33,7 @@ export interface ProductInfer {
   description: string;
   price: number;
   rating?:RatingType;
+  id?:number;
 }
 
 export default function EcommerceProductCard({image, title, description, price}:ProductInfer) {
