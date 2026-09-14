@@ -15,8 +15,6 @@ export const metadata: Metadata = {
 
 export default function PrductPage() {
   return (
-    
      <ProductCardListComponent/>
-    
   )
 }

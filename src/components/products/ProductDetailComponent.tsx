@@ -96,7 +96,7 @@ const MAX_STARS = 5;
 
 interface ProductDetail1Props {
   className?: string;
-  id: string;
+  id: number;
 }
 
 const ProductDetailComponent = ({ className, id }: ProductDetail1Props) => {
