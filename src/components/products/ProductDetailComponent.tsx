@@ -315,7 +315,7 @@ const ProductImages = ({ images }: ProductImagesProps) => {
           >
             <AspectRatio ratio={1} className="overflow-hidden rounded-lg">
               <Image
-                src={img.srcset}
+                src={img?.src}
                 alt={img.alt}
                 width={img.width}
                 height={img.height}
