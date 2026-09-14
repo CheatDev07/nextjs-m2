@@ -16,7 +16,7 @@ export async function generateMetadata(
   const { id } = await params
  
   // fetch data
-  const product = await fetch(`${process.env.NEXT_PUBLIC_FAKESTORE_API}/products/${id}`).then((res) => res.json())
+  const product = await fetch(`${process.env.FAKESTORE_API}/products/${id}`).then((res) => res.json())
  
   // optionally access and extend (rather than replace) parent metadata
   // const previousImages = (await parent).openGraph?.images || []
